@@ -3,6 +3,7 @@ html, body {
   min-height: 768px;
   min-width: 1366px;
   overflow: hidden;
+  color: #f1f1f1;
 }
 
 div {
@@ -21,12 +22,15 @@ div {
 
 /* 3D 旋转盒子 */
 .box-3d {
+  position: absolute;
+  top: 100px;
+  left: 50%;
   width: 100px;
   height: 100px;
+  margin-left: -50px;
+  color: #000;
   /*开启3D*/
   transform-style: preserve-3d;
-  margin: 50px auto;
-  position: relative;
   /*设置3D盒子的变换中心点*/
   transform-origin: center center -50px;
   animation: anim 10s linear infinite alternate;
@@ -41,7 +45,7 @@ div {
   }
 }
 
-.box {
+.box-3d .box {
   width: 100px;
   height: 100px;
   text-align: center;
@@ -50,53 +54,68 @@ div {
   position: absolute;
 }
 
-.box1 {
+.box-3d .box1 {
   background-color: rgba(0, 0, 0, .2);
   top: -100px;
   transform-origin: bottom;
   transform: rotateX(90deg)
 }
 
-.box2 {
+.box-3d .box2 {
   background-color: rgba(255, 0, 0, .2);
   left: 100px;
   transform-origin: left;
   transform: rotateY(90deg)
 }
 
-.box3 {
+.box-3d .box3 {
   background-color: rgba(0, 255, 0, .2);
   top: 100px;
   transform-origin: top;
   transform: rotateX(-90deg)
 }
 
-.box4 {
+.box-3d .box4 {
   background-color: rgba(0, 0, 255, .2);
   left: -100px;
   transform-origin: right;
   transform: rotateY(-90deg)
 }
 
-.box5 {
+.box-3d .box5 {
   background-color: rgba(255, 255, 0, .2);
   transform: translateZ(-100px)
 }
 
-.box6 {
+.box-3d .box6 {
   background-color: rgba(0, 255, 255, .2);
 }
 
 /* 3D 旋转照片墙 */
 .image-3d {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  margin-left: -100px;
   transform-style: preserve-3d;
-  perspective: 500px;
+  perspective: 400px;
   height: 300px;
-  width: 214px;
-  margin: 500px auto 0;
+  width: 200px;
 }
 
 .image-3d img {
   width: 200px;
   position: absolute;
+}
+
+/* 页脚 */
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -600px;
+  width: 1200px;
+  padding: 20px;
+  text-align: center;
+  color: #bfbfbf;
 }

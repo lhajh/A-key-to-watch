@@ -5,7 +5,7 @@ var rotateDeg = 360 / len;
 
 for (var i = 0; i < len; i++) {
   // 先旋转，再位移
-  imgList[i].style.transform = "rotateY(" + rotateDeg * i + "deg) translateZ(-600px)";
+  imgList[i].style.transform = "rotateY(" + rotateDeg * i + "deg) translateZ(-400px)";
   imgList[i].dataset.rotateDeg = rotateDeg * i;
 }
 
@@ -15,7 +15,7 @@ setInterval(function () {
     // 获取之前的旋转角度
     var lastDeg = imgList[i].dataset.rotateDeg;
     imgList[i].style.transition = ".3s"
-    imgList[i].style.transform = "rotateY(" + (parseInt(lastDeg) + rotateDeg) + "deg) translateZ(-600px)";
+    imgList[i].style.transform = "rotateY(" + (parseInt(lastDeg) + rotateDeg) + "deg) translateZ(-400px)";
 
     // 记录本次旋转的角度
     imgList[i].dataset.rotateDeg = (parseInt(lastDeg) + rotateDeg)
