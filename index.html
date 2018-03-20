@@ -10,6 +10,7 @@
   <title>lhajh</title>
 </head>
 <body>
+  <!-- 3D 旋转盒子 -->
   <div class="box-3d">
     <div class="box box1">l</div>
     <div class="box box2">h</div>
@@ -18,8 +19,28 @@
     <div class="box box5">h</div>
     <div class="box box6">♥</div>
   </div>
+  <div class="content">
+    <!-- 搜索框 -->
+    <div class="search">
+      <input type="url" name="url" class="url">
+      <input type="button" value="一键观看" class="button">
+    </div>
+    <!-- 使用说明 -->
+    <div class="instruction">
+      <ul>
+        <li>1. 点击下方图片或打开任意主流视频网站</li>
+        <li>2. 找到您需要观看的视频并复制浏览器上方的 URL</li>
+        <li>3. 将 URL 粘贴到上方输入框中</li>
+        <li>4. 回车或点击 '一键观看', 即可享受无广告、VIP 的待遇</li>
+      </ul>
+    </div>
+  </div>
+  <!-- 3D 旋转图片 -->
   <div class="image-box">
     <div class="image-3d">
+      <a href="https://www.bilibili.com/" target="_blank">
+        <img src="images/0.jpg" alt="">
+      </a>
       <a href="http://www.iqiyi.com/" target="_blank">
         <img src="images/1.png" alt="">
       </a>
@@ -38,12 +59,21 @@
       <a href="https://tv.sohu.com/" target="_blank">
         <img src="images/6.jpg" alt="">
       </a>
+      <a href="http://video.tudou.com/" target="_blank">
+        <img src="images/7.jpg" alt="">
+      </a>
+      <a href="http://www.pptv.com/" target="_blank">
+        <img src="images/8.jpg" alt="">
+      </a>
+      <a href="http://www.fun.tv/" target="_blank">
+        <img src="images/9.jpg" alt="">
+      </a>
     </div>
   </div>
   <footer>
     <p class="footer">Copyright &copy; lhajh 2018-2020.Company  All rights reserved.</p>
   </footer>
   <script src="./js/animation.js"></script>
-  <script src="./js/play.js"></script>
+  <script src="./js/search.js"></script>
 </body>
 </html>

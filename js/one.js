@@ -1,5 +1,7 @@
 http://vip.baiyug.cn/baiyug.php?url=http://www.iqiyi.com/v_19rrbdk7cc.html&type=iqiyi
 
+// 优酷： http://api.baiyug.cn/vip/index.php?url=encodeURIComponent($url)
+
 javascript: (function (a, b, c, d) {
   a[c] ? a[c].ui.show() :
     (

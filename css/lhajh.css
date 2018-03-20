@@ -1,7 +1,5 @@
 html, body {
   height: 100%;
-  min-height: 768px;
-  min-width: 1366px;
 }
 
 div {
@@ -56,6 +54,10 @@ input:-webkit-autofill {
 
 :-ms-input-placeholder {
   color: #ccc !important;
+}
+
+input {
+  outline: none;
 }
 
 input[type="button"],
@@ -162,6 +164,67 @@ textarea:focus,
 .box-3d .box6 {
   background-color: rgba(0, 255, 255, .3);
   color: rgb(255, 0, 0);
+}
+
+/* 主内容 */
+.content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-left: -500px;
+  width: 1000px;
+  height: 400px;
+  text-align: center
+}
+
+/* 搜索框 */
+.search {
+  margin-bottom: 100px;
+}
+
+.search .url {
+  display: inline-block;
+  padding: 4px 20px;
+  width: 420px;
+  height: 34px;
+  border: 1px solid rgb(10, 120, 223);
+  border-radius: 20px;
+  background: #FFF;
+  color: #333;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+input[type="url"]:focus {
+  border-color: #40df78;
+}
+
+.search .button {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0 20px;
+  height: 46px;
+  border: 3px solid #d7d7d7;
+  border-radius: 20px;
+  background: #fdfdfd;
+  background: -webkit-linear-gradient(top,#0a78df,#18c009);
+  background: -moz-linear-gradient(top,#0a78df,#18c009);
+  background: -ms-linear-gradient(top,#0a78df,#18c009);
+  background: -o-linear-gradient(top,#0a78df,#18c009);
+  background: linear-gradient(top,#0a78df,#18c009);
+  color: #353535;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+input[type="button"]:focus {
+  border-color: #40df78;
+}
+
+/* 使用说明 */
+.instruction {
+  
 }
 
 /* 3D 旋转照片墙 */
