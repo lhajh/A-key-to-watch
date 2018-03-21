@@ -23,15 +23,27 @@
     <!-- 搜索框 -->
     <div class="search">
       <input type="url" name="url" class="url">
+      <div class="line-box">
+        <div class="line line1">
+          <label for="line1"> 线路 1 </label>
+          <input type="radio" name="line" value="1" id="line1"  onchange ="change()" checked />
+        </div>
+        <div class="line line2">
+          <label for="line2"> 线路 2 </label>
+          <input type="radio" name="line" value="2" id="line2"  onchange ="change()" />
+        </div>
+      </div>
       <input type="button" value="一键观看" class="button">
     </div>
     <!-- 使用说明 -->
     <div class="instruction">
+      <div>使用说明：</div>
       <ul>
         <li>1. 点击下方图片或打开任意主流视频网站</li>
         <li>2. 找到您需要观看的视频并复制浏览器上方的 URL</li>
         <li>3. 将 URL 粘贴到上方输入框中</li>
         <li>4. 回车或点击 '一键观看', 即可享受无广告、VIP 的待遇</li>
+        <li>5. 如遇无法观看, 请切换播放线路</li>
       </ul>
     </div>
   </div>

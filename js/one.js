@@ -2,6 +2,13 @@ http://vip.baiyug.cn/baiyug.php?url=http://www.iqiyi.com/v_19rrbdk7cc.html&type=
 
 // 优酷： http://api.baiyug.cn/vip/index.php?url=encodeURIComponent($url)
 
+// 截取两个字符之间的字符串
+var s = "1234A4567B789";
+/A(\d*)B/.test(s);
+/\.(\S+)\./.test('www.bai.com')
+console.log(RegExp.$1);
+
+
 javascript: (function (a, b, c, d) {
   a[c] ? a[c].ui.show() :
     (
