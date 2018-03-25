@@ -44,14 +44,14 @@ var FX = {};
   document.getElementById('button').addEventListener('mouseover', buttonEffect);
 
   function buttonEffect() {
-    var button = document.getElementById('button'),
-      height = button.offsetHeight,
-      left = button.offsetLeft,
-      top = button.offsetTop,
-      width = button.offsetWidth,
+    var button = document.getElementById('button').getBoundingClientRect(),
+      height = button.height,
+      left = button.left,
+      top = button.top,
+      width = button.width,
       x, y, degree;
 
-    for (var i = 0; i < 40; i = i + 1) {
+    for (var i = 0; i < 300; i = i + 1) {
       if (Math.random() < 0.5) {
         y = Math.randMinMax(top, top + height);
         if (Math.random() < 0.5) {
@@ -109,7 +109,9 @@ var FX = {};
       size = 2,
       i = 0,
       p;
-    // ctx.fillStyle = '#333';
+      var img = document.getElementById('bg_img');
+      var pat = ctx.createPattern(img, 'repeat');
+      ctx.fillStyle = pat;
     ctx.fillRect(0, 0, width, height);
     ctx.globalCompositeStyle = 'lighter';
     for (; i < amount; i = i + 1) {
@@ -122,7 +124,7 @@ var FX = {};
       ctx.save();
       ctx.translate(p.x, p.y);
       ctx.rotate(p.degree * Math.TO_RAD);
-      // ctx.fillStyle = p.color;
+      ctx.fillStyle = p.color;
       ctx.fillRect(-size, -size, size * 2, size * 2);
       ctx.restore();
     }

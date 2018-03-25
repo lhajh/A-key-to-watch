@@ -31,7 +31,14 @@ function change () {
   var previousSibling = lineParent.previousSibling.previousSibling
   var nextSibling = lineParent.nextSibling.nextSibling
   lineParent.style.borderColor = '#409eff'
-  previousSibling ?  previousSibling.style.borderColor = '#dcdfe6' : nextSibling.style.borderColor = '#dcdfe6'
+  lineParent.style.color = '#409eff'
+  if (previousSibling) {
+    previousSibling.style.borderColor = '#dcdfe6'
+    previousSibling.style.color = '#dcdfe6'
+  } else {
+    nextSibling.style.borderColor = '#dcdfe6'
+    nextSibling.style.color = '#dcdfe6'
+  }
 }
 
 change()

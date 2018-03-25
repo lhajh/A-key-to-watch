@@ -8,7 +8,7 @@ div {
 }
 
 body {
-  background: #333333 url(../images/bg.png);
+  background: #333 url(../images/bg.png);
   color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
   -webkit-touch-callout: none;
@@ -180,6 +180,7 @@ textarea:focus,
   width: 100px;
   height: 100px;
   margin-left: -50px;
+  z-index: -1;
   color: #000;
   /*开启3D*/
   transform-style: preserve-3d;
@@ -314,6 +315,9 @@ textarea:focus,
 }
 
 /* 搜索框 */
+.search {
+  position: relative;
+}
 .search .url {
   display: inline-block;
   padding: 4px 20px;
@@ -343,6 +347,10 @@ input[type="url"]:focus {
   padding: 3px;
 }
 
+.line-box .line:hover {
+  border-style: dashed;
+}
+
 .line-box label {
   display: inline-block;
   padding: 10px;
@@ -355,6 +363,7 @@ input[type="radio"] {
 
 /* 提交按钮 */
 .search .button {
+  /* position: absolute; */
   display: inline-block;
   overflow: hidden;
   padding: 0 20px;
@@ -378,6 +387,13 @@ input[type="radio"] {
 
 input[type="button"]:focus {
   border-color: #40df78;
+}
+
+#colorful {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
 }
 
 /* 使用说明 */
