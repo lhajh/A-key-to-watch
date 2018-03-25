@@ -19,6 +19,13 @@
   <div class="bb8">
     <div></div>
   </div>
+  <!-- tip -->
+  <div class="tip">
+    <span class="bot"></span>
+    <span class="top"></span>
+    Hi! 我是 lhajh 的机器人，小 l. <br />
+    和我玩, 我会告诉你如何免费观看 VIP 视频
+  </div>
   <!-- 3D 旋转盒子 -->
   <div class="box-3d">
     <div class="box box1">l</div>
@@ -28,26 +35,25 @@
     <div class="box box5">h</div>
     <div class="box box6">♥</div>
   </div>
-  <div class="content">
-    <!-- 搜索框 -->
-    <div class="search">
-      <input
-        type="url" name="url" class="url"
-        placeholder="情不知所起，一往而深..."
-        onfocus="this.placeholder=''" onblur="this.placeholder='情不知所起，一往而深...'"
-      >
-      <div class="line-box">
-        <div class="line line1">
-          <label for="line1"> 线路 1 </label>
-          <input type="radio" name="line" value="1" id="line1"  onchange ="change()" checked />
-        </div>
-        <div class="line line2">
-          <label for="line2"> 线路 2 </label>
-          <input type="radio" name="line" value="2" id="line2"  onchange ="change()" />
-        </div>
+  <!-- 搜索框 -->
+  <div class="search">
+    <input
+      type="url" name="url" class="url"
+      placeholder="情不知所起，一往而深..."
+      onfocus="this.placeholder=''" onblur="this.placeholder='情不知所起，一往而深...'"
+    >
+    <div class="line-box">
+      <div class="line line1">
+        <label for="line1"> 线路 1 </label>
+        <input type="radio" name="line" value="1" id="line1"  onchange ="change()" checked />
       </div>
-      <input type="button" value="一键观看" class="button" id="button">
+      <div class="line line2">
+        <label for="line2"> 线路 2 </label>
+        <input type="radio" name="line" value="2" id="line2"  onchange ="change()" />
+      </div>
     </div>
+    <input type="button" value="一键观看" class="button" id="button">
+  </div>
     <!-- 使用说明 -->
     <!-- <div class="instruction">
       <div>使用说明：</div>
@@ -59,7 +65,6 @@
         <li>5. 如遇无法观看, 请切换播放线路</li>
       </ul>
     </div> -->
-  </div>
   <!-- 发光圆形 -->
   <div class='luminous'>
     <div class='round'></div>
