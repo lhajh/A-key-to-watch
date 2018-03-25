@@ -46,4 +46,4 @@ setInterval(function () {
     boxList[i].style.color = randomRgbColor()
     boxList[i].style.background = randomRgbaColor()
   }
-}, 2000)
+}, 3000)
