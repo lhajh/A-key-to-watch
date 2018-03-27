@@ -16,11 +16,11 @@ function search () {
     value = value.trim()
     var line = document.querySelector("input[name='line']:checked").value
     if (line === '1') {
-      window.open('http://api.baiyug.cn/vip/index.php?url=' + encodeURIComponent(value))
+      window.location.href = 'http://api.baiyug.cn/vip/index.php?url=' + encodeURIComponent(value)
     } else {
       var reg = /\.(\S+)\.c/.test(value)
       var domain = RegExp.$1
-      window.open('http://vip.baiyug.cn/baiyug.php?url=' + value + '&type=' + domain)
+      window.location.href = 'http://vip.baiyug.cn/baiyug.php?url=' + value + '&type=' + domain
     }
   }
 }
