@@ -92,11 +92,131 @@ textarea:focus,
   clear: both;
 }
 
+/* 电池 */
+.battery {
+  position: absolute;
+  top: 80px;
+  right: 150px;
+}
+
+.battery div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 250px;
+  height: 120px;
+  margin-left: -130px;
+  margin-top: -60px;
+  border-radius: 10px/30px;
+  border-left: 2px solid rgba(255,255,255,0.2);
+  border-right: 2px solid rgba(255,255,255,0.2);
+  -webkit-animation: charge 10s infinite linear;
+  animation: charge 10s infinite linear;
+}
+
+.battery div:before {
+  width: 12px;
+  height: 55px;
+  right: -14px;
+  top: 32px;
+  border-top-right-radius: 6px 10px;
+  border-bottom-right-radius: 6px 10px;
+  background-image: linear-gradient(to bottom,rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 14%,rgba(255,255,255,0.8) 14%,rgba(255,255,255,0.3) 40%,rgba(255,255,255,0) 41%,rgba(255,255,255,0) 80%,rgba(255,255,255,0.2) 80%,rgba(255,255,255,0.4) 86%,rgba(255,255,255,0.6) 90%,rgba(255,255,255,0.1) 92%,rgba(255,255,255,0.1) 95%,rgba(255,255,255,0.5) 98%);
+}
+
+.battery div:after {
+  width: 220px;
+  height: 120px;
+  left: 10px;
+  border-radius: 5px/30px;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  background-image: linear-gradient(to bottom,rgba(255,255,255,0.3) 4%,rgba(255,255,255,0.2) 5%,transparent 5%,transparent 14%,rgba(255,255,255,0.3) 14%,rgba(255,255,255,0.12) 40%,rgba(0,0,0,0.05) 42%,rgba(0,0,0,0.05) 48%,transparent 60%,transparent 80%,rgba(255,255,255,0.3) 87%,rgba(255,255,255,0.3) 92%,transparent 92%,transparent 97%,rgba(255,255,255,0.4) 97%),linear-gradient(to left,rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.2) 2%,black 2%,black 6%,transparent 6%),linear-gradient(to bottom,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0.3) 90%,rgba(255,255,255,0) 90%);
+}
+
+.battery div:before, .battery div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+@-webkit-keyframes charge {
+  0% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 6%,#255405 7%,black 10%,black 95%,transparent 95%);
+  }
+  10% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 14.5%,#255405 15%,black 18%,black 95%,transparent 95%);
+  }
+  20% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 23%,#255405 24%,black 27%,black 95%,transparent 95%);
+  }
+  30% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 31.5%,#255405 32%,black 35%,black 95%,transparent 95%);
+  }
+  40% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 40%,#255405 41%,black 44%,black 95%,transparent 95%);
+  }
+  50% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 48.5%,#255405 49%,black 52%,black 95%,transparent 95%);
+  }
+  60% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 57%,#255405 58%,black 61%,black 95%,transparent 95%);
+  }
+  70% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 65.5%,#255405 66%,black 69%,black 95%,transparent 95%);
+  }
+  80% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 74%,#255405 75%,black 78%,black 95%,transparent 95%);
+  }
+  90% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 81.5%,#255405 82%,black 85%,black 95%,transparent 95%);
+  }
+  100% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 90%,#255405 91%,black 94%,black 95%,transparent 95%);
+  }
+}
+
+@keyframes charge {
+  0% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 6%,#255405 7%,black 10%,black 95%,transparent 95%);
+  }
+  10% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 14.5%,#255405 15%,black 18%,black 95%,transparent 95%);
+  }
+  20% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 23%,#255405 24%,black 27%,black 95%,transparent 95%);
+  }
+  30% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 31.5%,#255405 32%,black 35%,black 95%,transparent 95%);
+  }
+  40% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 40%,#255405 41%,black 44%,black 95%,transparent 95%);
+  }
+  50% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 48.5%,#255405 49%,black 52%,black 95%,transparent 95%);
+  }
+  60% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 57%,#255405 58%,black 61%,black 95%,transparent 95%);
+  }
+  70% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 65.5%,#255405 66%,black 69%,black 95%,transparent 95%);
+  }
+  80% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 74%,#255405 75%,black 78%,black 95%,transparent 95%);
+  }
+  90% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 81.5%,#255405 82%,black 85%,black 95%,transparent 95%);
+  }
+  100% {
+    background-image: linear-gradient(to right,transparent 5%, #316d08 5%, #64ce11 6%,#64ce11 90%,#255405 91%,black 94%,black 95%,transparent 95%);
+  }
+}
+
 /* bb8 机器人 */
 .bb8 {
   position: absolute;
-  top: 150px;
-  left: 100px;
+  top: 160px;
+  left: 120px;
   z-index: -3;
 }
 
@@ -175,8 +295,8 @@ textarea:focus,
 /* tip */
 .tip {
   position: absolute;
-  top: 30px;
-  left: 140px;
+  top: 40px;
+  left: 160px;
   z-index: -1;
   width: 340px; 
   padding: 30px 20px; 
@@ -208,8 +328,8 @@ textarea:focus,
 /* 提示点击遮罩层 */
 .tip-box {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 20px;
   width: 200px;
   height: 290px;
   cursor: pointer;
